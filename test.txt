@@ -1,0 +1,2 @@
+A new feature called test-feature.txt has been added. 
+We are handling this in a new place
