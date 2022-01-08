@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>SVG.js</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@svgdotjs/svg.js@3.0/dist/svg.min.js"></script>
+</head>
+
+<body>
+
+    <script>
+        let draw = SVG().addTo('body').size(300, 300);
+        draw.attr('id', 'svg-viewbox');
+
+        console.log("the SVG is", SVG('#svg-viewbox').dom);
+        let nested = draw.nested();
+        nested.rect(100, 100).attr({ fill: 'red' });
+        nested.rect(50, 50).attr({ fill: 'green' });
+        nested.rect(20, 20).attr({ fill: 'blue' });
+
+    </script>
+</body>
+
+</html>
