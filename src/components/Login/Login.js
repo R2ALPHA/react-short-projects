@@ -35,8 +35,8 @@ const Login = (props) => {
   // const [passwordIsValid, setPasswordIsValid] = useState();
   const [formIsValid, setFormIsValid] = useState(false);
 
-  const [emailState, dispatchEmail] = useReducer(emailReducer, { value: '', isValid: true });
-  const [passwordState, dispatchPassword] = useReducer(passwordReducer, { value: '', isValid: true });
+  const [emailState, dispatchEmail] = useReducer(emailReducer, { value: '', isValid: false });
+  const [passwordState, dispatchPassword] = useReducer(passwordReducer, { value: '', isValid: false });
 
   const { isValid: emailIsValid } = emailState;
   const { isValid: passwordIsValid } = emailState;
