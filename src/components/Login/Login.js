@@ -60,31 +60,19 @@ const Login = (props) => {
   }, [emailIsValid, passwordIsValid]);
 
   const emailChangeHandler = (event) => {
-    // setEnteredEmail(event.target.value);
     dispatchEmail({ type: 'USER_INPUT', val: event.target.value });
-
-    // setFormIsValid(
-    //   event.target.value.includes('@') && passwordState.value.trim().length > 6
-    // );
   };
 
   const passwordChangeHandler = (event) => {
-    // setEnteredPassword(event.target.value);
     dispatchPassword({ type: 'USER_INPUT', val: event.target.value });
-
-    // setFormIsValid(
-    //   emailState.isValid && event.target.value.trim().length > 6
-    // );
   };
 
   const validateEmailHandler = () => {
     dispatchEmail({ type: 'INPUT_BLUR' });
-    // setEmailIsValid(emailState.isValid);
   };
 
   const validatePasswordHandler = () => {
     dispatchPassword({ type: 'INPUT_BLUR' });
-    // setPasswordIsValid(enteredPassword.trim().length > 6);
   };
 
   const submitHandler = (event) => {
