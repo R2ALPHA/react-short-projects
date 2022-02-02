@@ -21,6 +21,15 @@ class UserFinder extends Component {
         };
     }
 
+    componentWillUnMount() {
+        console.log("UNMOUNT");
+    }
+
+    componentDidMount() {
+        // Send http request 
+        this.setState({ filteredUsers: DUMMY_USERS });
+    }
+
     componentDidUpdate(prevProps, prevState) {
         if (prevState.searchTerm !== this.state.searchTerm) {
             this.setState({
