@@ -6,12 +6,14 @@ import classes from './AvailableMeals.module.css';
 const AvailableMeals = () => {
 
   const [meals, setMeals] = useState([]);
-  useEffect(()=> {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
 
     const fetchMeals = async () => {
       const response = await fetch('https://react-http-de395-default-rtdb.firebaseio.com/meals.json');
       const responseData = await response.json();
-      
+
       const loadedMeals = [];
       for (const key in responseData) {
         loadedMeals.push({
@@ -23,10 +25,11 @@ const AvailableMeals = () => {
       }
 
       setMeals(loadedMeals);
+      setIsLoading(false);
     };
 
     fetchMeals();
-  },[]);
+  }, []);
 
   const mealsList = meals.map((meal) => (
     <MealItem
@@ -37,6 +40,14 @@ const AvailableMeals = () => {
       price={meal.price}
     />
   ));
+
+  if (isLoading) {
+    return (
+      <section className={classes.mealsLoading}>
+        <p>Loading ...</p>
+      </section>
+    )
+  }
 
   return (
     <section className={classes.meals}>
