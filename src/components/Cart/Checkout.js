@@ -39,8 +39,6 @@ const Checkout = (props) => {
             postal: enteredPostalIsValid
         });
 
-        console.log("is post code valid",enteredPostalIsValid);
-
         const formIsValid = enteredNameIsValid && enteredStreetIsValid && enteredCityIsValid && enteredPostalIsValid;
         if (!formIsValid) {
             return;
