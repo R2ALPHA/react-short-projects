@@ -1,0 +1,23 @@
+{
+  "name": "max-react",
+  "version": "1.0.0",
+  "description": "This project is a sort of self learning project and is heavily inspired from mac millian. To navigate between different branches use branch. This is only for self learning process.",
+  "main": "redux-demo.js",
+  "dependencies": {
+    "redux": "^4.1.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R2ALPHA/React-Learning.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R2ALPHA/React-Learning/issues"
+  },
+  "homepage": "https://github.com/R2ALPHA/React-Learning#readme"
+}
