@@ -21,12 +21,6 @@ const counterSlice = createSlice({
     }
 });
 
-const store = configureStore({
-    reducer: {
-        counter: counterSlice.reducer
-    }
-});
-
 const initialAuthState = { isAuthenticated: false };
 
 const authSlice = createSlice({
@@ -39,6 +33,13 @@ const authSlice = createSlice({
         logut(state) {
             state.isAuthenticated = false;
         }
+    }
+});
+
+const store = configureStore({
+    reducer: {
+        counter: counterSlice.reducer,
+        auth: authSlice.reducer
     }
 });
 
