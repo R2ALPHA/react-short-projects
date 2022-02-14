@@ -2,9 +2,9 @@ const Products = () => {
     return <section>
         <h1>Product Page</h1>
         <ul>
-            <li>Product 1</li>
-            <li>Product 2</li>
-            <li>Product 3</li>
+            <li>A Book</li>
+            <li>A Carpet</li>
+            <li>An online course</li>
         </ul>
     </section>
 };
