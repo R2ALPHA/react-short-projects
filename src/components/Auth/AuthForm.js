@@ -52,7 +52,7 @@ const AuthForm = () => {
         return res.json();
         // ...
       } else {
-        res.json().then(data => {
+        return res.json().then(data => {
           let errorMessage = data?.error?.message ? data.error.message : 'Authentication failed !';
           throw new Error(errorMessage);
         });
