@@ -8,7 +8,6 @@ const store = configureStore({
         auth: authSlice.reducer
     }
 });
-
 export const counterActions = counterSlice.actions;
 export const authActions = authSlice.actions;
 
