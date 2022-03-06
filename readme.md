@@ -1,4 +1,4 @@
-Collection of Short projects to learn and practice different concept related to react.
+Collection of short projects to learn, practice different concept related to react, redux. 
 =====================================================================================
 Switch branches to switch between different project.
 Alternatively you can click links to view the projects. 
