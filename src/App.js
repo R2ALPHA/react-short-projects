@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import { useState } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Backdrop from './components/Backdrop/Backdrop';
+import List from './components/List/List';
+import Modal from "./components/Modal/Modal";
+
+const App = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  return <div className="App">
+    <h1>React Animations</h1>
+    <Modal closed={closeModal} show={isModalOpen} />
+    <Backdrop show={isModalOpen} />
+    <button className="Button" onClick={showModal} >Open Modal</button>
+    <h3>Animating Lists</h3>
+    <List />
+  </div>
+};
 
 export default App;
